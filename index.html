@@ -434,14 +434,38 @@
         </div>
       </div >
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <!--!   =================MODAL WINDOW============== -->
+    <!--------------------------------------------------->
+    <!-- is-hidden -->
+    <div class="backdrop " data-modal>
       <div class="modal">
+        <!-- CLOSE BTN -->
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-close-btn-icon">
             <use href="./images/svg/symbol.svg#close-modal"> 
             </use>
           </svg>
         </button>
+        <!-- FORM -->
+          <form class="mf">
+            <b>Leave your contacts and we will call you back</b>
+            <label class="mf-label">
+              <span class="mf-input-desc">Name</span>
+              <input type="text" class="mf-input">
+            </label>
+            <label class="mf-label">
+              <span class="mf-input-desc">Phone</span>
+              <input type="tel" class="mf-input">
+            </label>
+            <label class="mf-label">
+              <span class="mf-input-desc">Email</span>
+              <input type="email" class="mf-input">
+            </label>
+            <label class="mf-label">
+              <span class="mf-input-desc">Email</span>
+              <textarea name="" id="" ></textarea>
+            </label>
+          </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
