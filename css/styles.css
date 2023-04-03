@@ -348,7 +348,7 @@ address {
 }
 .footer-cont {
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   max-width: 1188px;
   padding-left: 156px;
@@ -385,7 +385,7 @@ address {
 
 .soc-media-title {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 150%; /* 24/16 */
   letter-spacing: 0.02em;
   margin-bottom: 16px;
   color: var(--white);
@@ -412,6 +412,67 @@ address {
 .soc-media-link:hover,
 .soc-media-link:focus {
   background-color: var(--green);
+}
+.subscription {
+  margin-left: 80px;
+}
+.subscription-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.subscription-wrap {
+  display: flex;
+}
+.subscription-mail {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  min-width: 264px;
+  height: 40px;
+  padding-left:16px;
+  margin-right: 24px;
+}
+.subscription-mail:focus {
+  outline-width: 0;
+  border-color: var(--iris);
+}
+.subscription-mail::placeholder {
+  color: var(--white);
+}
+.subscription-btn {
+  display: flex;
+  flex-direction:row-reverse;
+  gap: 16px;
+  background-color: var(--iris);
+  border-radius: 4px;
+  border: 0;
+  padding: 8px 24px;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  transition: background-color var(--transition);
+}
+.subscription-btn:hover,
+.subscription-btn:focus {
+  background-color: var(--ocean);
+}
+.icon-telegram {
+  width: 24px;
+  height: 24px;
+  fill: var(--white);
 }
 /*!```````````````P O R T F O L I O```````````````` */
 .menu-gallery {
@@ -535,11 +596,13 @@ address {
   transform: translate(-50%, -50%);
   max-width: 100%;
   width: 408px;
-  height: 576px;
+  min-height: 584px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 24px;
+  padding-top: 72px;
 }
 .modal-close-btn {
   position: absolute;
@@ -570,4 +633,143 @@ address {
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
   fill: var(--white);
+}
+/* MODAL FORM (MF) */
+.mf {
+  display: flex;
+  flex-direction: column;
+}
+.mf-input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid rgba(46, 47, 66, 0.2);
+  background-color: transparent;
+  border-radius: 4px;
+  padding-left: 38px;
+  color: var(--navy-blue);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  transition: border-color var(--transition);
+}
+.mf-input-wrapper {
+  position: relative;
+}
+.mf-input:focus {
+  outline-width: 0;
+  border-color: var(--iris);
+}
+.mf-icons {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: var(--navy-blue);
+  transition: fill var(--transition);
+}
+.mf-input:focus + .mf-icons {
+  fill: var(--iris);
+}
+.mf-input-desc {
+  display: block;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%; /* 14/12 */
+  letter-spacing: 0.01em;
+  color: var(--light-slate);
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.mf-text {
+  width: 100%;
+  resize: none;
+  border-color: transparent;
+  height: 120px;
+  border: 1px solid rgba(46, 47, 66, 0.2);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  transition: border-color var(--transition);
+  padding: 8px;
+}
+.mf-text::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+.mf-text:focus {
+  outline-width: 0;
+  border-color: var(--iris);
+}
+
+.mf-title {
+  font-size: 16px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 150%; /* 24/16 */
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+}
+.mf-check-desc::before {
+  content: '';
+  display: block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #2e2f42;
+  border-radius: 2px;
+}
+.mf-check:checked + .mf-check-desc::before {
+  outline-width: 0;
+  background: var(--ocean);
+  border-color: 1px solid var(--ocean);
+  background-image: url(../images/svg/checkboox-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mf-check-desc {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+.mf-link {
+  color: var(--ocean);
+  transform: color var(--transition);
+}
+.mf-link:hover,
+.mf-link:focus {
+  color: var(--iris);
+}
+.mf-btn {
+  width: 169px;
+  height: 56px;
+  background: var(--iris);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white);
+  border: 0;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  font-family: inherit;
+  min-width: 169px;
+  height: 56px;
+  transition: background-color var(--transition);
+  align-self: center;
+}
+.mf-btn:focus,
+.mf-btn:hover {
+  background-color: var(--ocean);
 }
