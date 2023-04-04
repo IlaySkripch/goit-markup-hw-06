@@ -641,7 +641,7 @@ address {
 }
 .mf-input {
   width: 100%;
-  height: 42px;
+  height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.2);
   background-color: transparent;
   border-radius: 4px;
@@ -666,8 +666,8 @@ address {
   left: 16px;
   transform: translateY(-50%);
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   fill: var(--navy-blue);
   transition: fill var(--transition);
 }
@@ -718,12 +718,14 @@ address {
 }
 .mf-check-desc::before {
   content: '';
-  display: block;
+  display: inline-block;
   cursor: pointer;
   width: 16px;
   height: 16px;
   border: 1px solid #2e2f42;
   border-radius: 2px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 .mf-check:checked + .mf-check-desc::before {
   outline-width: 0;
